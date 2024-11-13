@@ -1,4 +1,4 @@
-:{$PORT:3000} {
+:{$PORT} {
     root * dist
     encode gzip
     file_server

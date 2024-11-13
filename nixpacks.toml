@@ -12,4 +12,4 @@ dependsOn = ['caddy']
 cmds = ['caddy fmt --overwrite Caddyfile']
 
 [start]
-cmd = 'exec caddy run --config Caddyfile --adapter caddyfile 2>&1'
+cmd = 'caddy run --config Caddyfile --adapter caddyfile'
