@@ -7,7 +7,7 @@ NPM_CONFIG_FUND = 'false'
 cmds = [
   "npm install",
   "npm run build",
-  "ls dist"  # Verify that dist is created and populated
+  "ls -R dist"  # Verify that dist is created and populated
 ]
 
 [phases.caddy]
