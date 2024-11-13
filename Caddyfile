@@ -5,6 +5,6 @@
     try_files {path} /index.html
     log {
         output stderr
-        format single_field common_log
+        format console
     }
 }
