@@ -13,13 +13,14 @@ onMounted(load)
   <section id="hero">
     <img id="uwu" alt="Vue.js Kawaii Logo by @icarusgkx" />
     <h1 class="tagline">
-      The
-      <span class="accent">Progressive</span>
-      <br />JavaScript Framework
+      <span class="accent">Sure </span>
+      Way to
+      <span class="accent">Trade</span>
+
+<!--      <br />For Algo Trading-->
     </h1>
     <p class="description">
-      An approachable, performant and versatile framework for building web
-      user interfaces.
+      Unlock professional trading algorithms and market insights for consistent success
     </p>
     <p class="actions">
       <VueMasteryModal />
@@ -39,7 +40,7 @@ onMounted(load)
       </a>
       <a class="setup" href="/guide/quick-start.html">Install</a>
       <a class="security" href="https://v2.vuejs.org/eol/" target="_blank">
-        Get Security Updates for Vue 2
+        Try free tier
         <svg
           class="icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -85,17 +86,16 @@ onMounted(load)
 
   <section id="highlights" class="vt-box-container">
     <div class="vt-box">
-      <h2>Approachable</h2>
+      <h2>Strategy Builder</h2>
       <p>
-        Builds on top of standard HTML, CSS and JavaScript with intuitive
-        API and world-class documentation.
+        Create powerful automated trading strategies effortlessly
+        with Zero-Code interface
       </p>
     </div>
     <div class="vt-box">
-      <h2>Performant</h2>
+      <h2>Smart Order Management</h2>
       <p>
-        Truly reactive, compiler-optimized rendering system that rarely
-        requires manual optimization.
+        Implement professional techniques for optimal trade execution.
       </p>
     </div>
     <div class="vt-box">
