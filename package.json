@@ -4,9 +4,10 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "vitepress",
+    "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
+    "start": "echo 'Static site, no server needed'",
     "preinstall": "npx only-allow pnpm",
     "type": "vue-tsc --noEmit"
   },
