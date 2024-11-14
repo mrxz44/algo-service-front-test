@@ -9,6 +9,8 @@ import api from '../../axios'
 
 
 const apiData = ref(null)
+const apiBaseUrl = api.defaults.baseURL
+
 const loadApiData = async () => {
   try {
     const response = await api.get('/')
@@ -49,6 +51,8 @@ onMounted(() => {
     <p v-if="apiData" class="api-output">
       <strong>API Output:</strong> {{ apiData.message }}
     </p>
+
+    <p>{{ apiBaseUrl }}</p>
 
     <p class="actions">
       <VueMasteryModal />
