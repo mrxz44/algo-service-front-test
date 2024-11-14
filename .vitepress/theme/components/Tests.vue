@@ -9,12 +9,9 @@ const apiData = ref(null)
 
 const loadApiData = async () => {
   try {
-    // Make the API call to the root endpoint
     const response = await api.get('/')
-    console.log('VITE_API_BASE_URL:', import.meta.env.VITE_API_BASE_URL);
     console.log('Raw API Response:', response)
 
-    // Check if the response content type is JSON and assign the data to apiData
     if (response.headers['content-type'] && response.headers['content-type'].includes('application/json')) {
       apiData.value = response.data
     } else {
@@ -43,6 +40,12 @@ onMounted(() => {
     <p class="description">
       Unlock professional trading algorithms and market insights for consistent success
     </p>
+
+    <!-- Display API Output Here -->
+    <p v-if="apiData" class="api-output">
+      <strong>API Output:</strong> {{ apiData.message }}
+    </p>
+
     <p class="actions">
       <VueMasteryModal />
       <a class="get-started" href="/guide/introduction.html">
@@ -55,18 +58,13 @@ onMounted(() => {
       <a class="security" href="https://v2.vuejs.org/eol/" target="_blank">
         Try free tier
         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/>
+          <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8-7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/>
         </svg>
       </a>
     </p>
   </section>
 
-  <!-- Display API Data -->
-  <section id="api-output">
-    <h2>API Output</h2>
-    <pre>{{ apiData }}</pre>
-  </section>
-
+  <!-- Other content continues -->
   <section id="highlights" class="vt-box-container">
     <div class="vt-box">
       <h2>Strategy Builder</h2>
@@ -94,4 +92,9 @@ onMounted(() => {
 
 <style scoped>
 /* Existing styles */
+.api-output {
+  font-size: 16px;
+  color: var(--vt-c-text-2);
+  margin: 16px 0;
+}
 </style>
