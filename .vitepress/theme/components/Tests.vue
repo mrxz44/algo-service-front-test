@@ -1,11 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import SiteMap from './SiteMap.vue'
-// import NewsLetter from './NewsLetter.vue'
-// import { load, data, base } from './sponsors'
-// import SponsorsGroup from './SponsorsGroup.vue'
-import VueMasteryModal from './VueMasteryModal.vue'
 import api from '../../axios'
+import TradingChart from './TradingChart.vue';
 
 
 const apiData = ref(null)
@@ -14,7 +11,7 @@ console.log('API base URL:', apiBaseUrl)
 
 const loadApiData = async () => {
   try {
-    const response = await api.get('/')
+    const response = await api.get('/run_strategy/BTCUSDT/15m')
     if (response.headers['content-type'] && response.headers['content-type'].includes('application/json')) {
       apiData.value = response.data
     } else {
@@ -27,7 +24,6 @@ const loadApiData = async () => {
   }
 }
 
-// onMounted(load)
 onMounted(() => {
   loadApiData()
   // load()
@@ -36,15 +32,22 @@ onMounted(() => {
 
 
 <template>
+
+<!--  <TradingChart v-if="apiData" :data="apiData" />-->
+
   <section id="hero">
 
     <p v-if="apiData" class="api-output">
-      <strong>API Output:</strong> {{ apiData.message }}
+      <strong>API Output:</strong> {{ apiData }}
     </p>
 
     <p>{{ apiBaseUrl }}</p>
 
+    <TradingChart v-if="apiData" :data="apiData" />
+
   </section>
+
+
 
 
   <SiteMap />

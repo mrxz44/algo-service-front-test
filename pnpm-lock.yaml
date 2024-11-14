@@ -23,6 +23,9 @@ importers:
       gsap:
         specifier: ^3.12.5
         version: 3.12.5
+      lightweight-charts:
+        specifier: ^4.2.1
+        version: 4.2.1
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@22.7.5)
@@ -636,6 +639,9 @@ packages:
   estree-walker@2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
 
+  fancy-canvas@2.1.0:
+    resolution: {integrity: sha512-nifxXJ95JNLFR2NgRV4/MxVP45G9909wJTEKz5fg/TZS20JJZA6hfgRVh/bC9bwl2zBtBNcYPjiBE4njQHVBwQ==}
+
   focus-trap@7.6.0:
     resolution: {integrity: sha512-1td0l3pMkWJLFipobUcGaf+5DTY4PLDDrcqoSaKP8ediO/CoWCCYk/fT/Y2A4e6TNB+Sh6clRJCjOPPnKoNHnQ==}
 
@@ -679,6 +685,9 @@ packages:
   is-what@4.1.16:
     resolution: {integrity: sha512-ZhMwEosbFJkA0YhFnNDgTM4ZxDRsS6HqTo7qsZM08fehyRYIYa0yHu5R6mgo1n/8MgaPBXiPimPD77baVFYg+A==}
     engines: {node: '>=12.13'}
+
+  lightweight-charts@4.2.1:
+    resolution: {integrity: sha512-nE2zCZ5Gp7KZbVHUJi6QhQLkYRvYyxsQTnSLEXIFmc8iHOFBT4rk/Dbyecq+CLW59FNuoCPNOYjZnS63/uHDrA==}
 
   magic-string@0.30.12:
     resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
@@ -1516,6 +1525,8 @@ snapshots:
 
   estree-walker@2.0.2: {}
 
+  fancy-canvas@2.1.0: {}
+
   focus-trap@7.6.0:
     dependencies:
       tabbable: 6.2.0
@@ -1558,6 +1569,10 @@ snapshots:
   html-void-elements@3.0.0: {}
 
   is-what@4.1.16: {}
+
+  lightweight-charts@4.2.1:
+    dependencies:
+      fancy-canvas: 2.1.0
 
   magic-string@0.30.12:
     dependencies:
