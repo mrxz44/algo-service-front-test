@@ -14,8 +14,10 @@
   "dependencies": {
     "@vue/repl": "^4.4.2",
     "@vue/theme": "^2.3.0",
+    "axios": "^1.7.7",
     "dynamics.js": "^1.1.5",
     "gsap": "^3.12.5",
+    "vite": "^5.4.11",
     "vitepress": "^1.4.3",
     "vue": "^3.5.12"
   },

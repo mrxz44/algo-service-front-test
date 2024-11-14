@@ -6,8 +6,10 @@ import { load, data, base } from './sponsors'
 import SponsorsGroup from './SponsorsGroup.vue'
 import VueMasteryModal from './VueMasteryModal.vue'
 
+
 onMounted(load)
 </script>
+
 
 <template>
   <section id="hero">
@@ -22,6 +24,7 @@ onMounted(load)
     <p class="description">
       Unlock professional trading algorithms and market insights for consistent success
     </p>
+
     <p class="actions">
       <VueMasteryModal />
       <a class="get-started" href="/guide/introduction.html">

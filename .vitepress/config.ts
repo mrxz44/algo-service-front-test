@@ -8,6 +8,12 @@ import { headerPlugin } from './headerMdPlugin'
 
 const nav: ThemeConfig['nav'] = [
   {
+
+    text: 'TESTS',
+    activeMatch: `^/tests/`,
+    link: '/tests/'
+  },
+  {
     text: 'Docs',
     activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
     items: [
