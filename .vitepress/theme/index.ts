@@ -12,6 +12,8 @@ import SponsorsAside from './components/SponsorsAside.vue'
 import VueSchoolLink from './components/VueSchoolLink.vue'
 import Banner from './components/Banner.vue'
 // import TextAd from './components/TextAd.vue'
+import ApiData from './components/ApiData.vue'
+import ApiChartWrapper from './components/ApiChartWrapper.vue'
 
 export default Object.assign({}, VPTheme, {
   Layout: () => {
@@ -29,5 +31,7 @@ export default Object.assign({}, VPTheme, {
     app.provide('filter-headers', filterHeadersByPreference)
     app.component('VueSchoolLink', VueSchoolLink)
     // app.component('TextAd', TextAd)
+    app.component('ApiData', ApiData)
+    app.component('ApiChartWrapper', ApiChartWrapper)
   }
 })

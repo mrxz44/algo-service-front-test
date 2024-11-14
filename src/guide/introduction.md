@@ -4,6 +4,10 @@ footer: false
 
 # Introduction {#introduction}
 
+Here is the TradingView-style chart with live data.
+
+<ApiChartWrapper />
+
 :::info You are reading the documentation for Vue 3!
 
 - Vue 2 support has ended on **Dec 31, 2023**. Learn more about [Vue 2 EOL](https://v2.vuejs.org/eol/).
