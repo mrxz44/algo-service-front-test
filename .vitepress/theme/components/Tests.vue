@@ -38,7 +38,7 @@ onMounted(() => {
   <section id="hero">
 
     <p v-if="apiData" class="api-output">
-      <strong>API Output:</strong> {{ apiData }}
+<!--      <strong>API Output:</strong> {{ apiData }}-->
     </p>
 
     <p>{{ apiBaseUrl }}</p>
