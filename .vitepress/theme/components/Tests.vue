@@ -10,6 +10,7 @@ import api from '../../axios'
 
 const apiData = ref(null)
 const apiBaseUrl = api.defaults.baseURL
+console.log('API base URL:', apiBaseUrl)
 
 const loadApiData = async () => {
   try {
