@@ -1,3 +1,4 @@
+// ========================================================================
 import fs from 'fs'
 import path from 'path'
 import { defineConfigWithTheme } from 'vitepress'
@@ -8,10 +9,24 @@ import { headerPlugin } from './headerMdPlugin'
 
 const nav: ThemeConfig['nav'] = [
   {
-
     text: 'TESTS',
     activeMatch: `^/tests/`,
     link: '/tests/'
+  },
+  {
+    text: 'Login',
+    activeMatch: `^/login/`,
+    link: '/login/'
+  },
+  {
+    text: 'Register',
+    activeMatch: `^/register/`,
+    link: '/register/'
+  },
+  {
+    text: 'Dashboard',
+    activeMatch: `^/dashboard/`,
+    link: '/dashboard/'
   },
   {
     text: 'Docs',

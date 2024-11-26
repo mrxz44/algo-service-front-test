@@ -1,9 +1,11 @@
 ---
 footer: false
+aside: false
 ---
 
 # Introduction {#introduction}
 
+## chart {#_chart}
 Here is the TradingView-style chart with live data.
 
 <ApiChartWrapper />

@@ -18,9 +18,11 @@
     "dynamics.js": "^1.1.5",
     "gsap": "^3.12.5",
     "lightweight-charts": "^4.2.1",
+    "pinia": "^2.2.6",
     "vite": "^5.4.11",
     "vitepress": "^1.4.3",
-    "vue": "^3.5.12"
+    "vue": "^3.5.12",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@types/body-scroll-lock": "^3.1.2",
