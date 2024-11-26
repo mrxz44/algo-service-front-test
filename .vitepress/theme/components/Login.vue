@@ -49,7 +49,9 @@ const handleLogin = async () => {
       // Redirect to Dashboard
       // const redirectPath = router.currentRoute.value.query.redirect || '/dashboard';
       // router.push(redirectPath);
-      window.location.href = '/dashboard';
+      if (typeof window !== 'undefined') {
+        window.location.href = '/dashboard';
+      }
     } else {
       error.value = 'Unexpected login response format';
     }
