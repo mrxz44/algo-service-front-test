@@ -1,5 +1,5 @@
 // .vitepress/router.js
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, createMemoryHistory } from 'vue-router';
 
 // Define routes
 const routes = [
@@ -12,22 +12,28 @@ const routes = [
   },
 ];
 
-// Create the router instance
+// Use createMemoryHistory for SSR, and createWebHistory for the client
+const isSSR = typeof window === 'undefined';
+const history = isSSR ? createMemoryHistory() : createWebHistory();
+
 const router = createRouter({
-  history: createWebHistory(),
+  history,
   routes,
 });
 
-// Add navigation guards
+// Navigation guards
 router.beforeEach((to, from, next) => {
-  const isAuthenticated = !!localStorage.getItem('access_token'); // Check token existence
-  if (to.meta.requiresAuth && !isAuthenticated) {
-    next('/login'); // Redirect to login if not authenticated
-  } else if (to.path === '/login' && isAuthenticated) {
-    console.log('Navigation Guard:', { to, from });
-    next('/dashboard'); // Redirect to dashboard if already logged in
+  if (typeof window !== 'undefined') {
+    const isAuthenticated = !!localStorage.getItem('access_token'); // Check token existence
+    if (to.meta.requiresAuth && !isAuthenticated) {
+      next('/login');
+    } else if (to.path === '/login' && isAuthenticated) {
+      next('/dashboard');
+    } else {
+      next();
+    }
   } else {
-    next(); // Allow navigation
+    next(); // Allow navigation during SSR
   }
 });
 
