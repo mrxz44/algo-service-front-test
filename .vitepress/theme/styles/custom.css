@@ -1,0 +1,7 @@
+:root {
+  --vp-layout-max-width: 1100px; /* Adjust this value as needed */
+}
+
+.content-container {
+  max-width: 1100px !important; /* Use !important to override other styles */
+}
